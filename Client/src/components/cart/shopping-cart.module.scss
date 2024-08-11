@@ -1,0 +1,79 @@
+@import '../../theme.scss';
+
+.shopping_cart_icon {
+    width   : 25px;
+    cursor  : pointer;
+    position: relative;
+    z-index: 2;
+
+    .cart_products_quantity {
+        position        : absolute;
+        left            : 7px;
+        top             : -10px;
+        height          : 22px;
+        width           : 22px;
+        border-radius   : 50%;
+        text-align      : center;
+        line-height     : 22px;
+        background-color: $primaryColor;
+        font-size       : 11px;
+        color: $white;
+        z-index: -1;
+    }
+}
+
+.product_quantity_counter {
+    width        : 150px;
+    height       : 40px;
+    border       : $containerBorder;
+    border-radius: 6px;
+
+    .counter_value {
+        font-size  : 22px;
+        font-weight: 500;
+    }
+
+    .update_counter_button {
+        display         : block;
+        width           : 40px;
+        height          : 100%;
+        background-color: $white;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        transition      : all 0.3s ease;
+
+        &:first-child {
+            border-top-left-radius   : 6px;
+            border-bottom-left-radius: 6px;
+            border-right             : $containerBorder;
+        }
+
+        &:last-child {
+            border-top-right-radius   : 6px;
+            border-bottom-right-radius: 6px;
+            border-left               : $containerBorder;
+
+        }
+
+        &:hover {
+            background-color: $primaryColor;
+            color           : $white;
+            cursor          : pointer;
+        }
+
+    }
+}
+
+.product_quantity_counter_small {
+    width : 100px;
+    height: 30px;
+
+    .counter_value {
+        font-size: 16px;
+    }
+
+    .update_counter_button {
+        width: 30px;
+    }
+}

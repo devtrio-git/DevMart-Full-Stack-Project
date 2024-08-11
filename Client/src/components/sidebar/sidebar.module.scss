@@ -1,0 +1,63 @@
+@import '../../theme.scss';
+
+.sidebar_container {
+    position        : fixed;
+    right           : 0;
+    top             : 0;
+    z-index         : 10;
+    height          : 100vh;
+    width           : 300px;
+    background-color: $pageBackground;
+    box-shadow      : -4px 0 6px -1px rgba(0, 0, 0, 0.1);
+    transform       : translateX(100%);
+    transition      : all .3s ease-in-out;
+
+    &.active {
+        transform: translateX(0%);
+    }
+
+    .close_sidebar_icon {
+        position : absolute;
+        top      : 5px;
+        left     : 10px;
+        font-size: 30px;
+    }
+
+    .sidebar_content_container {
+        margin-top: 80px;
+
+        .global_search_wrapper {
+            margin-left  : 25px;
+            margin-bottom: 100px;
+        }
+
+        .shopping_cart_container {
+            display    : flex;
+            margin-left: 28px;
+            gap        : 85px;
+
+        }
+
+
+        .nav_link_container {
+            >ul {
+                list-style: none;
+
+                li {
+                    margin   : 15px 0px;
+                    font-size: 22px;
+
+                    a {
+                        display: inline-block;
+                        height : 30px;
+
+                        &:hover {
+                            border-bottom: 1px solid $dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,14 @@
+@import '../../theme.scss';
+
+
+.top_bar_container {
+    background-color: $dark;
+    color           : $lightGray;
+    text-align      : center;
+    padding         : 10px;
+
+
+    @media screen and (max-width: 600px) {
+        font-size: 10px;
+    }
+}

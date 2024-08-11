@@ -1,0 +1,37 @@
+@import '../../theme.scss';
+
+.img_container {
+    height: 400px;
+
+    img {
+        width     : 100%;
+        height    : 100%;
+        object-fit: cover;
+    }
+}
+
+.swiper_button_container {
+    display        : flex;
+    justify-content: end;
+    position       : relative;
+    top            : -40px;
+}
+
+.nav_btn {
+    // border: 1px solid grey;
+    width           : 45px;
+    height          : 45px;
+    margin-right    : 10px;
+    cursor          : pointer;
+    background-color: $lightGrey2;
+    text-align      : center;
+    line-height     : 45px;
+    border-radius   : 50%;
+}
+
+
+.product_other_images {
+    height    : 125px;
+    width     : 145px;
+    object-fit: contain;
+}

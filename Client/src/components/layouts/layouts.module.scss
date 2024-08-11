@@ -1,0 +1,14 @@
+.auth_banner_img {
+    >img {
+        min-height: 90vh;
+        width     : 100%;
+        object-fit: cover;
+    }
+}
+
+.form_wrapper {
+    min-height     : 90vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}

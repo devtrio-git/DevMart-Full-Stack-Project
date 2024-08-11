@@ -1,0 +1,127 @@
+@import '../../theme.scss';
+
+.product_images_container {
+    >figure {
+        max-height: 450px;
+        min-height: 150px;
+        >img {
+            width     : 100%;
+            object-fit: contain;
+        }
+    }
+
+    .product_images_slider_container {
+        height: 125px;
+    }
+}
+
+
+.product_content_container {
+    .product_title {
+        font-size: 35px;
+
+        @media screen and (max-width:576px) {
+            font-size: 28px;
+        }
+    }
+
+    .in_stock {
+        padding-left: 15px;
+        border-left : 1px solid $darkGray;
+        color       : #39e67e;
+        font-weight : 500;
+    }
+
+    .product_price {
+        font-size  : 35px;
+        font-weight: 400;
+        margin     : 15px 0px;
+
+        @media screen and (max-width:576px) {
+            font-size: 28px;
+        }
+    }
+
+    .product_desc {
+        font-size     : 16px;
+        font-weight   : 500;
+        padding-bottom: 30px;
+        border-bottom : 1px solid $darkGray;
+    }
+
+    .product_color_variants {
+        .product_color_title {
+            font-size   : 22px;
+            font-weight : 400;
+            margin-right: 17px;
+        }
+
+        .color_box {
+            height       : 20px;
+            width        : 20px;
+            border-radius: 50%;
+            border       : 3px solid $dark;
+            cursor       : pointer;
+        }
+    }
+
+
+    .product_buy_container {
+        >div:nth-child(2) {
+            width: 150px;
+        }
+    }
+
+    .product_shipping_container {
+        max-width    : 420px;
+        border-radius: 8px;
+        border       : $containerBorder;
+
+
+        .shipping_card {
+            min-height : 80px;
+            width      : 100%;
+            display    : flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                border-bottom: $containerBorder;
+            }
+
+            figure {
+                width          : 90px;
+                height         : 100%;
+                text-align     : center;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+                margin         : 0 !important;
+
+                >img {
+                    width: 50px;
+                }
+            }
+
+
+            .shipping_card_content {
+                display        : flex;
+                justify-content: center;
+                align-items    : flex-start;
+                flex-direction : column;
+
+                >h5 {
+                    font-size  : 17px;
+                    font-weight: 700;
+                }
+
+                >p {
+                    font-size  : 14px;
+                    font-weight: 500;
+                    margin     : 0 !important;
+                }
+            }
+        }
+    }
+
+
+}

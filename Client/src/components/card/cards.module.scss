@@ -1,0 +1,50 @@
+@import '../../theme.scss';
+
+.category_card_container{
+    border: 1px solid $borderGrey;
+    width: 180px;
+    height: 140px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        padding: 0;
+        margin:0;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+}
+.product_card_container{
+    // border: 2px solid red;
+    width: 280px;
+    .card_img_container{
+        height: 250px;
+        background-color: $lightGrey2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 75%;
+            height: 76%;
+            object-fit: cover;
+        }
+    }
+    .card_content{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        .card_detail{
+            h6{
+                font-weight: 600;
+            }
+            p{
+                color: $primaryColor;
+                font-weight: 600;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../theme.scss';
+
+.container{
+    .header{
+        display: flex;
+        align-items: center;
+
+        p{
+            color: $primaryColor;
+            font-weight: 500;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,0 +1,306 @@
+{
+    "products": [
+        {
+          "id": 1,
+          "name": "Havic HV G-92 Gamepad",
+          "description": "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.",
+          "price": "192.00",
+          "stockQty": "10",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.3",
+          "colors": ["#ffffff","#000000"]
+        },
+        {
+          "id": 2,
+          "name": "SuperTech VR Headset X3000",
+          "description": "Immerse yourself in virtual reality with the SuperTech X3000. Crystal clear optics and comfortable fit for hours of gameplay.",
+          "price": "299.99",
+          "stockQty": "15",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.8",
+          "colors": ["#333333","#ff9900"]
+        },
+        {
+          "id": 3,
+          "name": "EchoSphere Wireless Speaker",
+          "description": "High-fidelity wireless speaker with deep bass and clear highs. Perfect for parties or relaxing at home.",
+          "price": "149.95",
+          "stockQty": "20",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.5",
+          "colors": ["#ffffff","#00ccff"]
+        },
+        {
+          "id": 4,
+          "name": "XtremePro 4K Action Camera",
+          "description": "Capture your adventures in stunning 4K resolution with the XtremePro. Waterproof casing included.",
+          "price": "179.00",
+          "stockQty": "8",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.2",
+          "colors": ["#000000","#ff0000"]
+        },
+        {
+          "id": 5,
+          "name": "Zenith Smartwatch ZW200",
+          "description": "Stay connected and stylish with the Zenith ZW200. Health monitoring, notifications, and customizable faces.",
+          "price": "249.99",
+          "stockQty": "12",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.6",
+          "colors": ["#ffffff","#00ff00"]
+        },
+        {
+          "id": 6,
+          "name": "Phantom X Gaming Mouse",
+          "description": "Precision gaming mouse with customizable RGB lighting and programmable buttons. Ergonomic design for long gaming sessions.",
+          "price": "79.99",
+          "stockQty": "18",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.4",
+          "colors": ["#000000","#6600cc"]
+        },
+        {
+          "id": 7,
+          "name": "Solaris Pro Noise-Canceling Headphones",
+          "description": "Block out distractions with the Solaris Pro headphones. Superior sound quality and comfortable fit for all-day use.",
+          "price": "199.95",
+          "stockQty": "9",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.7",
+          "colors": ["#ffffff","#333333"]
+        },
+        {
+          "id": 8,
+          "name": "Lunar Cruiser Electric Skateboard",
+          "description": "Cruise through the city with ease on the Lunar Cruiser. Electric-powered for speed and efficiency.",
+          "price": "349.00",
+          "stockQty": "5",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.1",
+          "colors": ["#000000","#3366ff"]
+        },
+        {
+          "id": 9,
+          "name": "Galactic Drone GD-2000",
+          "description": "Explore the skies with the Galactic Drone GD-2000. HD camera and stable flight for aerial photography and fun.",
+          "price": "279.99",
+          "stockQty": "7",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.3",
+          "colors": ["#ffffff","#ff6600"]
+        },
+        {
+          "id": 10,
+          "name": "Neptune Dive Watch NW300",
+          "description": "Dive into adventure with the Neptune NW300. Water-resistant up to 300 meters and stylish for any occasion.",
+          "price": "189.50",
+          "stockQty": "11",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.5",
+          "colors": ["#000000","#00ff99"]
+        },
+        {
+          "id": 11,
+          "name": "Aurora RGB Mechanical Keyboard",
+          "description": "Enhance your gaming setup with the Aurora RGB Mechanical Keyboard. Customizable lighting and responsive keys.",
+          "price": "129.99",
+          "stockQty": "14",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.6",
+          "colors": ["#ffffff","#ff3333"]
+        },
+        {
+          "id": 12,
+          "name": "Orion Fitness Tracker FT100",
+          "description": "Track your fitness goals with the Orion FT100. Heart rate monitoring and activity tracking in a sleek design.",
+          "price": "79.95",
+          "stockQty": "22",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.2",
+          "colors": ["#000000","#00cc66"]
+        },
+        {
+          "id": 13,
+          "name": "Stellar VR Glasses SV200",
+          "description": "Experience virtual reality like never before with the Stellar SV200. Lightweight and immersive visuals.",
+          "price": "149.00",
+          "stockQty": "13",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.4",
+          "colors": ["#ffffff","#9900cc"]
+        },
+        {
+          "id": 14,
+          "name": "Nova Compact Drone ND500",
+          "description": "Take flight with the Nova ND500 drone. Foldable design for easy portability and HD camera for aerial photography.",
+          "price": "199.99",
+          "stockQty": "6",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.3",
+          "colors": ["#000000","#ff9966"]
+        },
+        {
+          "id": 15,
+          "name": "Titan Gaming Chair TC900",
+          "description": "Dominate the game in comfort with the Titan TC900 gaming chair. Adjustable lumbar support and ergonomic design.",
+          "price": "249.95",
+          "stockQty": "16",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.7",
+          "colors": ["#ffffff","#333399"]
+        },
+        {
+          "id": 16,
+          "name": "Nebula Portable Projector NP300",
+          "description": "Create your own theater experience anywhere with the Nebula NP300 portable projector. HD resolution and compact size.",
+          "price": "299.00",
+          "stockQty": "10",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.5",
+          "colors": ["#000000","#cc3300"]
+        },
+        {
+          "id": 17,
+          "name": "Solaris Wireless Charging Pad",
+          "description": "Charge your devices wirelessly with the Solaris charging pad. Sleek design and fast charging capability.",
+          "price": "49.99",
+          "stockQty": "25",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.0",
+          "colors": ["#ffffff","#339966"]
+        },
+        {
+          "id": 18,
+          "name": "Astra Gaming Monitor AG240",
+          "description": "Immerse yourself in gaming with the Astra AG240 monitor. High refresh rate and vivid colors for a competitive edge.",
+          "price": "399.99",
+          "stockQty": "4",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.8",
+          "colors": ["#000000","#ffcc00"]
+        },
+        {
+          "id": 19,
+          "name": "Cosmic Wireless Earbuds CW1000",
+          "description": "Enjoy crystal-clear audio with the Cosmic CW1000 wireless earbuds. Comfortable fit and long battery life.",
+          "price": "89.95",
+          "stockQty": "17",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.4",
+          "colors": ["#ffffff","#660066"]
+        },
+        {
+          "id": 20,
+          "name": "HyperDrive USB-C Hub HD500",
+          "description": "Expand your device's connectivity with the HyperDrive HD500 USB-C hub. Multiple ports for seamless integration.",
+          "price": "59.99",
+          "stockQty": "21",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.3",
+          "colors": ["#000000","#00ffcc"]
+        },
+        {
+          "id": 21,
+          "name": "Photon Electric Scooter ES100",
+          "description": "Zip through the city streets with the Photon ES100 electric scooter. Foldable design for easy storage.",
+          "price": "299.00",
+          "stockQty": "8",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.2",
+          "colors": ["#ffffff","#ff3366"]
+        },
+        {
+          "id": 22,
+          "name": "Galaxy Gaming Console GC700",
+          "description": "Experience next-gen gaming with the Galaxy GC700 console. 4K gaming and streaming capabilities.",
+          "price": "449.99",
+          "stockQty": "3",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.9",
+          "colors": ["#000000","#99cc00"]
+        },
+        {
+          "id": 23,
+          "name": "NovaTech External SSD NSD1000",
+          "description": "Transfer and store data quickly with the NovaTech NSD1000 external SSD. Compact design for portability.",
+          "price": "129.99",
+          "stockQty": "9",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.6",
+          "colors": ["#ffffff","#cc99ff"]
+        },
+        {
+          "id": 24,
+          "name": "Solar Flare Smart Light SL500",
+          "description": "Illuminate your space with the Solar Flare SL500 smart light. Adjustable brightness and color options.",
+          "price": "69.95",
+          "stockQty": "15",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.1",
+          "colors": ["#000000","#ffcc99"]
+        },
+        {
+          "id": 25,
+          "name": "Orbit 360 Camera OC200",
+          "description": "Capture stunning 360-degree footage with the Orbit OC200 camera. Perfect for virtual tours and immersive experiences.",
+          "price": "299.95",
+          "stockQty": "6",
+          "images": [
+            "https://image.made-in-china.com/155f0j00wAsVpZzaymbl/Wholesale-Playstation-4-Gamepad-Joystick-Custom-Manette-Mando-Original-Control-for-PS4-Wireless-Controller.webp"
+          ],
+          "rating": "4.4",
+          "colors": ["#ffffff","#6666ff"]
+        }
+      ]
+      
+      
+}
