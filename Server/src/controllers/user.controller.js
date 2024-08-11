@@ -2,18 +2,19 @@ import { userModel } from "../models/user.schema.js";
 import bcrypt from 'bcryptjs';
 import jwt from "jsonwebtoken";
 import Constants from "../constant.js";
-export default class Users{
-    static async signup(req, res){
+import sendMail from "../utilities/email-send.js";
+export default class Users {
+    static async signup(req, res) {
         try {
-            const {name, email, password} = req.body;
-            if(!name || !email || !password){
-                return res.status(400).json({message:"All fields are required", status:"failed"})
+            const { name, email, password } = req.body;
+            if (!name || !email || !password) {
+                return res.status(400).json({ message: "All fields are required", status: "failed" })
             }
             // check if email already exists
-            const existingUser = await userModel.findOne({email});
+            const existingUser = await userModel.findOne({ email });
 
-            if(existingUser){
-                return res.status(409).json({message:"Email already exists", status:"failed"})
+            if (existingUser) {
+                return res.status(409).json({ message: "Email already exists", status: "failed" })
             }
             // hash the password
             const salt = await bcrypt.genSalt(10);
@@ -28,7 +29,7 @@ export default class Users{
             // create JWT token
             const payload = {
                 user: {
-                    id: newUser._id 
+                    id: newUser._id
                 }
             }
             const token = jwt.sign(
@@ -40,34 +41,34 @@ export default class Users{
             newUser.token = token;
             await newUser.save();
             console.log(token, "<-- token")
-            res.status(201).json({message:"User created successfully", status:"success", data: newUser})
+            res.status(201).json({ message: "User created successfully", status: "success", data: newUser })
         } catch (error) {
-            res.status(500).json({message: "Interval Server Error", status: "failed"})
+            res.status(500).json({ message: "Interval Server Error", status: "failed" })
         }
     }
 
-    static async login(req,res){
+    static async login(req, res) {
         try {
-            const {email, password} = req.body;
-            if(!email ||!password){
-                return res.status(400).json({message:"All fields are required", status:"failed"})
+            const { email, password } = req.body;
+            if (!email || !password) {
+                return res.status(400).json({ message: "All fields are required", status: "failed" })
             }
-            const user = await userModel.findOne({email});
+            const user = await userModel.findOne({ email });
             console.log(user, "user")
-            if (!user){
-                return res.status(404).json({message:"User not found", status:"failed"})
+            if (!user) {
+                return res.status(404).json({ message: "User not found", status: "failed" })
             }
 
             const isMatch = await bcrypt.compare(password, user.password)
             console.log(isMatch, "<-- isMatch")
-            if(!isMatch){
-                return res.status(401).json({message:"Invalid Password", status:"failed"})
+            if (!isMatch) {
+                return res.status(401).json({ message: "Invalid Password", status: "failed" })
             }
 
             // create JWT token
             const payload = {
                 user: {
-                    id: user._id 
+                    id: user._id
                 }
             }
             const token = jwt.sign(
@@ -75,19 +76,134 @@ export default class Users{
                 Constants.JWT_SECRET,
                 { expiresIn: "1y" }
             )
-            
+
             user.token = token;
             await user.save();
-            
-            res.json({message:"User logged in successfully", status:"success", data: user})
+
+            res.json({ message: "User logged in successfully", status: "success", data: user })
 
         } catch (error) {
-            res.status(500).json({message: "Interval Server Error", status: "failed"})
+            res.status(500).json({ message: "Interval Server Error", status: "failed" })
         }
     }
+
+    static async forgotPassword(req, res) {
+        try {
+            const { email } = req.body;
+            if (!email) {
+                return res.status(400).json({ message: "All fields are required", status: "failed" })
+            }
+
+            const user = await userModel.findOne({ email });
+            if (!user) {
+                return res.status(404).json({ message: "User not found", status: "failed" })
+            }
+
+            const otp = Math.floor(Math.random() * 900000 + 100000);
+
+            const mailResponse = await sendMail({
+                email: [email],
+                subject: "OTP Verification Code",
+                htmlTemplate: `<h1>OTP: ${otp}</h1>`
+            });
+
+            if (!mailResponse) {
+                res.status(500).json({ message: "Failed to send otp, please try later", status: "failed" })
+            }
+            user.otp = {
+                value: otp.toString(),
+                expireAt: new Date(Date.now() + 1000 * 60 * 10),
+                verified: false
+            }
+
+            await user.save();
+            res.status(200).json({ message: "OTP Send Successfully", status: "success" })
+
+        } catch (error) {
+            res.status(500).json({ message: "Interval Server Error", status: "failed" })
+        }
+    }
+    static async verifyOtp(req, res) {
+        try {
+            const { email, otp } = req.body;
+            if (!email || !otp) {
+                return res.status(400).json({ message: "All fields are required", status: "failed" })
+            }
+
+            const user = await userModel.findOne({ email });
+            if (!user) {
+                return res.status(404).json({ message: "User not found", status: "failed" })
+            }
+
+            if (user.otp.value !== otp.toString()) {
+                res.status(400).json({ message: "Invalid OTP", status: "failed" })
+            }
+            const currentTime = new Date();
+            if (user.otp.expireAt < currentTime) {
+                res.status(400).json({ message: "OTP is expired", status: "failed" })
+            }
+            user.otp.verified = true;
+            await user.save();
+            res.status(200).json({ message: "OTP Verified Successfully", status: "success" })
+
+        } catch (error) {
+            res.status(500).json({ message: "Interval Server Error", status: "failed" })
+        }
+    }
+
+    static async resetPassword(req, res) {
+        try {
+            const { email, password } = req.body;
+            if (!email || !password) {
+                return res.status(400).json({ message: "All fields are required", status: "failed" })
+            }
+            const user = await userModel.findOne({ email });
+            if (!user) {
+                return res.status(404).json({ message: "User not found", status: "failed" })
+            }
+
+            if (!user.otp.verified) {
+                return res.status(404).json({ message: "OTP Authentication failed, you are not verified user", status: "failed" })
+            }
+
+            const salt = await bcrypt.genSalt(10);
+            const hashedPassword = await bcrypt.hash(password, salt);
+            user.password = hashedPassword;
+            user.otp.verified = false;
+            // create JWT token
+            const payload = {
+                user: {
+                    id: user._id
+                }
+            }
+            const token = jwt.sign(
+                payload,
+                Constants.JWT_SECRET,
+                { expiresIn: "1y" }
+            )
+
+            user.token = token;
+            await user.save();
+
+            res.status(200).json({ message: "Password Update Successfully", status: "success" })
+
+        } catch (error) {
+            res.status(500).json({ message: "Interval Server Error", status: "failed" })
+        }
+    }
+
 }
 
 
+
+
+// forgot password apis...
+/*
+email...
+otp...
+verify..
+password update....
+*/
 
 /*
 signup algorithm
