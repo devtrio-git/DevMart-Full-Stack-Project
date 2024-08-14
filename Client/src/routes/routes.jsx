@@ -11,9 +11,13 @@ import Loader from "../components/loader/loader";
 const HomePage = lazy(()=> import("../pages/home/home"))
 const SignUpPage = lazy(()=> import("../pages/auth/sign-up"))
 const LoginPage = lazy(()=> import("../pages/auth/login"))
+const ForgotPasswordPage = lazy(()=> import("../pages/auth/forgot-password"))
+const ResetPassword = lazy(()=> import("../pages/auth/reset-password"))
+const OtpVerify = lazy(()=> import("../pages/auth/otp-verify"))
 const ProductsPage = lazy(()=> import("../pages/products/products"))
 const ProductInfoPage = lazy(()=> import("../pages/product-info/product-info"))
 const Checkout = lazy(()=> import("../pages/checkout/checkout"))
+
 
 export const publicRoutes = createBrowserRouter([
     {
@@ -27,6 +31,18 @@ export const publicRoutes = createBrowserRouter([
     {
         path: '/auth/login',
         element: <Suspense fallback={<Loader></Loader>}><LoginPage></LoginPage> </Suspense> 
+    },
+    {
+        path: '/auth/forgot-password',
+        element: <Suspense fallback={<Loader></Loader>}><ForgotPasswordPage></ForgotPasswordPage> </Suspense> 
+    },
+    {
+        path: '/auth/otp-verify',
+        element: <Suspense fallback={<Loader></Loader>}><OtpVerify></OtpVerify> </Suspense> 
+    },
+    {
+        path: '/auth/reset-password',
+        element: <Suspense fallback={<Loader></Loader>}><ResetPassword></ResetPassword> </Suspense> 
     },
     {
         path: '/products',

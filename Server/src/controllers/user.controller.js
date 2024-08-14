@@ -136,11 +136,11 @@ export default class Users {
             }
 
             if (user.otp.value !== otp.toString()) {
-                res.status(400).json({ message: "Invalid OTP", status: "failed" })
+              return res.status(400).json({ message: "Invalid OTP", status: "failed" })
             }
             const currentTime = new Date();
             if (user.otp.expireAt < currentTime) {
-                res.status(400).json({ message: "OTP is expired", status: "failed" })
+               return res.status(400).json({ message: "OTP is expired", status: "failed" })
             }
             user.otp.verified = true;
             await user.save();

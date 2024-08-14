@@ -1,10 +1,12 @@
 import express from 'express';
+import cors from 'cors';
 import Constants from './constant.js';
 import connectDb from './db/db.connect.js';
 import postRoutes from './routes/post.router.js';
 import userRoutes from './routes/user.routes.js';
 
 const app = express();
+app.use(cors());
 const port = Constants.PORT;
 
 app.use(express.json());
