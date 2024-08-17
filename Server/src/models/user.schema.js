@@ -9,7 +9,8 @@ const userSchema = mongoose.Schema({
         value: { type: String },
         expireAt: { type: Date },
         verified: { type: Boolean, default: false }
-    }
+    },
+    role: {type: String, default: "user", enum: ["user", "admin"]}
 });
 
 
