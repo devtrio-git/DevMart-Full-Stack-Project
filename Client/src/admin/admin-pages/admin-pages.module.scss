@@ -1,0 +1,17 @@
+@import '../../theme.scss';
+
+.page_head {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+
+    .page_main_buttons {
+        display    : flex;
+        gap        : 10px;
+        align-items: center;
+
+        .button {
+            min-width: 100px;
+        }
+    }
+}

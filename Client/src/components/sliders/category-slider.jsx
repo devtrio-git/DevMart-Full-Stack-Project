@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import styles from "./sliders.module.scss";
 import CategoryCard from '../card/category-card';
 
-const categories = [
+export const categories = [
   { icon: c1, title: "Phones" },
   { icon: c2, title: "Computers" },
   { icon: c3, title: "Phones" },

@@ -7,6 +7,10 @@ import { createBrowserRouter } from "react-router-dom";
 // import Checkout from "../pages/checkout/checkout";
 import { Suspense, lazy } from "react";
 import Loader from "../components/loader/loader";
+import AdminPanel from "../admin/admin-panel";
+import Dashboard from "../admin/admin-pages/dashboard/dashbaord";
+import ProductsGrid from "../admin/admin-pages/products/products-grid";
+import CategoryGrid from "../admin/admin-pages/categories/categories-grid";
 
 const HomePage = lazy(()=> import("../pages/home/home"))
 const SignUpPage = lazy(()=> import("../pages/auth/sign-up"))
@@ -17,6 +21,7 @@ const OtpVerify = lazy(()=> import("../pages/auth/otp-verify"))
 const ProductsPage = lazy(()=> import("../pages/products/products"))
 const ProductInfoPage = lazy(()=> import("../pages/product-info/product-info"))
 const Checkout = lazy(()=> import("../pages/checkout/checkout"))
+
 
 
 export const publicRoutes = createBrowserRouter([
@@ -75,6 +80,24 @@ export const privateRoutes = createBrowserRouter([
     {
         path: '/checkout',
         element: <Suspense fallback={<Loader></Loader>}><Checkout></Checkout> </Suspense> 
+    },
+    {
+        path: '/admin',
+        element: <AdminPanel></AdminPanel>,
+        children: [
+            {
+                index: true,
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/admin/categories',
+                element: <CategoryGrid></CategoryGrid>
+            },
+            {
+                path: '/admin/products',
+                element: <ProductsGrid></ProductsGrid>
+            },
+        ]
     },
     {
         path: '*',
