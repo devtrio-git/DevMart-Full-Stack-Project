@@ -1,0 +1,7 @@
+@import '../../../theme.scss';
+
+.category_grid_container {
+    display  : flex;
+    flex-wrap: wrap;
+    gap      : 10px;
+}

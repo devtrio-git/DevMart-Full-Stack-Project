@@ -9,6 +9,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../../redux/features/user-slice';
 import { baseUrl } from '../../services/constant';
+import AuthService from '../../services/auth.service';
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -36,10 +37,11 @@ const LoginPage = () => {
       setLoader(true);
       try {
         const payload = { email, password };
-        const response = await axios.post( baseUrl+"/user/login", payload)
+        const response = await axios.post(baseUrl + "/user/login", payload)
 
         console.log(response?.data?.data, "<-- login response")
-        dispatch(addUser(response?.data?.data))
+        dispatch(addUser(response?.data?.data));
+        AuthService.setAuthToken(response?.data?.data?.token);
         setErrors({ email: "", password: "" })
         navigate("/")
         setLoader(false);
