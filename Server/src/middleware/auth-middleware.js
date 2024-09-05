@@ -4,13 +4,11 @@ import Constants from '../constant.js';
 
 const authMiddleware = async (req,res,next) => {
     const token = req.headers.authorization?.split(" ")?.[1];
-    console.log(token, "<--token")
     if(!token) {
         return res.status(401).json({message: 'User Unauthorized', status: 'failed'});
     }
     try {
         const decode = jwt.verify(token, Constants.JWT_SECRET)
-        console.log(decode, "<-- decode")
         const user = await userModel.findById(decode?.user?.id);
         if(!user){
             return res.status(404).json({message: "User not Found", status: 'failed'});

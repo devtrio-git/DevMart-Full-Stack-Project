@@ -7,6 +7,7 @@ import userRoutes from './routes/user.routes.js';
 import categoryRoutes from './routes/category.routes.js'
 import productRoutes from './routes/product.routes.js'
 import orderRoutes from './routes/order.routes.js'
+import reviewRoutes from './routes/review.routes.js'
 const app = express();
 app.use(cors());
 const port = Constants.PORT;
@@ -18,6 +19,7 @@ app.use('/user', userRoutes);
 app.use('/category', categoryRoutes);
 app.use('/product', productRoutes);
 app.use('/order', orderRoutes);
+app.use('/review-rating', reviewRoutes);
 
 
 app.listen(port, () => {
